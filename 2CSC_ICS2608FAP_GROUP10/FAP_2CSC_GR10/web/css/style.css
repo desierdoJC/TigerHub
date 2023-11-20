@@ -1,0 +1,679 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04 27, 22, 1:33:19 PM
+    Author     : Christian
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Radio+Canada:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.mainHeader{
+    width: 100%;
+    height: 3.5vw;
+    background-color: #008037;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logoHeader{
+    width: 47%;
+    height:auto;
+}
+
+.menuList{
+    margin-left: 33%;
+    width: 100%;
+}
+
+.mainHeader .menuList ul li{
+    display: inline-block;
+    width: 8.5vw;
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 800;
+    font-size: 1vw;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.mainHeader .menuList ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.mainHeader .menuList ul li a:hover{
+    text-decoration: none;
+    color: #e69b2a;
+}
+
+.mainHeader .menuList ul li a.active {
+color: #e69b2a;
+}
+.footer{
+    width: 100%;
+    height: 3.5vw;
+    background-color: #008037;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footerText{
+   font-family: 'Radio Canada', sans-serif;
+   font-size: 1vw;
+   color:white;
+   text-align:left;
+}
+.signInButton {
+    width: 12%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.home{
+    height: 94vh;
+    overflow:hidden;
+    position: relative;
+}
+
+.home .slide{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    z-index:1; 
+    display:none;
+    animation: slide 3s ease;
+    margin-left: auto;
+}
+
+.home .slide.active{
+    display: flex;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.home .container{
+    flex-grow: 1;
+}
+
+.home .controls .prev,
+.home .controls .next{
+    position: absolute;
+    z-index:2;
+    top:45%;
+    height:40px;
+    width: 40px;
+    background-color:  #000000;
+    margin-top: -20px;
+    color:#ffffff;
+    text-align: center;
+    line-height: 40px;
+    font-size:20px;
+    cursor:pointer;
+    transition: all .5s ease;
+    border-radius: 50%;
+    margin: 1vw;
+}
+
+.home .controls .prev:hover,
+.home .controls .next:hover{
+    background-color: #008037;
+}
+.home .controls .prev{
+    left:0;
+}
+.home .controls .next{
+    right:0;
+}
+
+.home .indicator{
+    position: absolute;
+    left:50%;
+    bottom:30px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.home .indicator div{
+    display: inline-block;
+    width:1vw;
+    height: 1vw;
+    color:#ffffff;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.home .indicator div.active{
+    background-color: #008037;
+}
+
+
+
+
+
+
+.section {
+    width: 100%;
+    height: 10vw;
+    background-color: white;
+}
+
+.logoTextA{
+    width 100%;
+    height:3.8vw;
+    margin: 1.3vw 20vw 1.3vw 3vw; 
+}
+.logoTextB {
+    width: 17%;
+    margin: 1.3vw 20vw 1.3vw 3vw;
+}
+
+.copyright {
+    width: 21%;
+    margin: 0 2vw 1.7vw 1.6vw ;
+}
+
+
+
+.signMain{
+    width: 100%;
+    height: 47vw;
+    background-image: url("https://w0.peakpx.com/wallpaper/116/459/HD-wallpaper-microchip-neon-lines-black-background-chips-technology-backgrounds.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display:flex;
+}
+
+.welcomeTXT{
+    width: 40%;
+}
+
+.explore{
+    margin-top: 5vw;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #02b34e; 
+}
+.explore2{
+    margin-top: 1vw;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #02b34e; 
+}
+.signSide{
+    width: 40%;
+    height: 100%;
+}
+.adminSide{
+    width: 40%;
+    height: 100%;
+    margin-left: 32.5vw;
+}
+
+.loginBox{
+    margin-left: 1.3vw;
+    margin-top: 1.2vw;
+    padding: 3vw;
+    background-color: white;
+    border-radius: 50px;
+    width: 60%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.signUpBox{
+    margin-left: 1.3vw;
+    margin-top: 1.2vw;
+    padding: 2.5vw;
+    background-color: white;
+    border-radius: 50px;
+    width: 60%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+}
+.adminBox{
+   margin-left: 1.3vw;
+   margin-top: 1.2vw;
+   padding: 3vw;
+   background-color: white;
+   border-radius: 50px;
+   width: 60%;
+   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.signInLabel{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1vw;
+    color:#000000;
+    margin-bottom: 0.4vw;
+}
+
+
+.unpwLabel{
+    font-family: sans-serif;
+    font-size: 1vw;
+   color:#000000;
+}
+
+.userpass{
+    margin: 2% 0 0 1%;
+    border-style: none;
+    width: 93%;
+    font-size: 0.8vw;
+    box-shadow: 0px 4px 11px rgba(81, 81, 81, 0.25);
+    font-family: sans-serif;
+    color:#000000;
+    padding: 0.5vw;
+}
+
+.storeInput{
+   margin: 2% 0 0 1%;
+    border-style: none;
+    width: 50%;
+    font-size: 0.8vw;
+    box-shadow: 0px 4px 11px rgba(81, 81, 81, 0.25);
+    font-family: sans-serif;
+    color:#000000;
+    padding: 0.5vw; 
+}
+
+.captchaImg{
+    border-radius: 20px;
+    box-shadow: 0px 4px 11px rgba(81, 81, 81, 0.25);
+    margin: 0 25% 5% 25%;
+    width: 50%;
+}
+
+.loginBT{
+    font-size: 1.1vw;
+    margin: 0 30% 0 36%;
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    border-radius: 20px;
+    background-color: #008037;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+
+.loginBT:hover{
+    background-color: #02b34e;
+}
+
+.storeBT{
+    font-size: 1.5vw;
+    margin: 0 30% 3% 30%;
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    border-radius: 20px;
+    background-color: #008037;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+
+.storeBT:hover{
+    background-color: #02b34e; 
+}
+
+.signupText{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 0.9vw;
+}
+
+.signupText a {
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+}
+
+.signupText a:hover {
+    text-decoration: underline;
+}
+
+.flName {
+    margin: 2% 1% 2% 1%;
+    border-style: none;
+    font-size: 0.8vw;
+    box-shadow: 0px 4px 11px rgba(81, 81, 81, 0.25);
+    font-family: sans-serif;
+    padding: 0.5vw;
+    width: 86%;
+}
+
+.fName{
+    float: left;
+    width: 50%;
+    margin: auto;
+}
+
+.lName{
+    width: 50%;
+    margin: auto;
+}
+
+.products{
+    overflow: hidden;
+}
+
+.card {
+    background: #fff;
+    border-radius: 50px;
+    display: inline-block;
+    height: 20vw;
+    margin: 1.5vw;
+    width: 22%;
+}
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(1,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50), 0px 4px 4px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+}
+
+.card-1 img{
+    margin-top: 2.5vw;
+    width: 60%;
+    height: 60%;
+}
+
+.products p{
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vw;
+    text-align: center;
+    color: #000000;
+}
+
+.products h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 0.5vw;
+    color: #008037;
+}
+
+.products h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3vw;
+    text-align: center;
+    margin-bottom: 2vw;
+    color: #3F4247;
+}
+
+.storeLabel{
+    margin-top: 1.5vw;
+    background-color: #008037;
+    width: 35%;
+    height: 10%;
+    text-align: center;
+    padding: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 3vw;
+    color: white;
+    border-radius: 7px;
+}
+
+.errorMsgDiv{
+    width: 100%;
+    height: 47vw;
+    background-color: #3F4247;
+    overflow: hidden;
+}
+
+.rinaSorrySide{
+    float: left;
+    width: 30%;
+    padding-left: 20%;
+    padding-top: 5%;
+}
+
+.errorContainer{
+    float: right;
+    width: 50%; 
+}
+
+.errorBox{
+    margin-top: 25%;
+    padding: 2.5vw;
+    background-color: white;
+    border-radius: 50px;
+    width: 45%;
+    box-shadow: 0 2px 3px rgba(1,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+}
+
+.errorBox404{
+    margin-top: 30%;
+    padding: 2.5vw;
+    background-color: white;
+    border-radius: 50px;
+    width: 45%;
+    box-shadow: 0 2px 3px rgba(1,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+}
+
+.errorBox h1 {
+    color: #FF3801;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.errorBox p {
+    color: black;
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+}
+
+.errorBox404 h1 {
+    color: #FF3801;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.errorBox404 p {
+    color: black;
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+}
+
+.backBT{
+    font-size: 1.1vw;
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    border-radius: 20px;
+    background-color: #F24247;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+
+.backBT:hover{
+    background-color: #f55d61;
+}
+
+.successSec{
+    width: 100%;
+    height: 47vw;
+    background-color:  #3F4247;
+    background-image: linear-gradient(180deg, white 70%, #3F4247 30%);
+    overflow: hidden;
+}
+
+
+.buttonContainer{
+    float: left;
+    width: 50%;
+    margin-left: 15%;
+    margin-right: -30%;
+}
+
+.downloadBox{
+    margin-top: 20%;
+    padding: 2.5vw;
+    width: 50%;
+    text-align: center;
+}
+
+.downloadBox h1 {
+    color: #FF3801;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 3vw;
+    margin-bottom: 1vw;
+}
+
+.downloadBox p {
+    color: black;
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+}
+
+.dlSubAdminBT{
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 2px 3px rgba(1,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+    font-size:  1vw;
+    font-family: Montserrat;
+    border-style: none;
+    padding: 1vw;
+}
+
+.aboutSec{
+    width: 75%;
+    height: 62vw;
+    margin-left: 15vw;
+}
+
+.aboutImg{
+    width: 100%;
+    height: 32.5vw;
+    overflow: hidden;
+}
+
+.aboutCont{
+    margin: auto;
+    text-align:center;
+    margin-top: 4vw;
+    padding: 2.5vw;
+    background-color: white;
+    border-radius: 50px;
+    width: 80%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.aboutUs{
+    text-align: center;
+    width: 45%;
+    color:#008037;
+    font-family: Sans-serif;
+    margin-left:15vw;
+}
+
+.aboutCont h1{
+    color: #008037;
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 800;
+    font-size: 2.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.aboutCont .aboutUs p{
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 1vw;
+    margin-bottom: 1.2vw;
+    text-align: center;
+}
+
+.aboutMain{
+    width: 100%;
+    height: 60vw;
+    background-image: url("https://w0.peakpx.com/wallpaper/116/459/HD-wallpaper-microchip-neon-lines-black-background-chips-technology-backgrounds.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+
+.aboutCont .contactUsb p{
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 0.5vw;
+}
+
+.contactUsb{
+    width: 45%;
+    text-align: center;
+    margin-left:15vw;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+    .controls{
+        display: none;
+    }
+}
